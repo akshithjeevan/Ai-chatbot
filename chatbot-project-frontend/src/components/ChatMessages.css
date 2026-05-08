@@ -1,0 +1,22 @@
+ .chat-message-container {
+      flex-grow: 1;
+      margin-top: 20px;
+      overflow: scroll;
+      scrollbar-width: none;
+
+    }
+
+.empty-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+
+  pointer-events: none;
+}

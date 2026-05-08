@@ -1,0 +1,35 @@
+.app-container {
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Themes */
+.theme1 {
+  background-image: url("/theme1.jpg");
+}
+
+.theme2 {
+  background-image: url("/theme2.jpg");
+}
+
+.theme3 {
+  background-image: url("/theme3.jpg");
+}
+
+/* Overlay */
+.app-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Keep UI above overlay */
+.app-container > * {
+  position: relative;
+  z-index: 1;
+}
