@@ -1,5 +1,5 @@
 import RobotProfileImage from "../assets/robot.png";
-import UserProfileImage from "../assets/User.png";
+import UserProfileImage from "../assets/user.png";
 import { BotMessageSquare } from 'lucide-react';
 import { User } from 'lucide-react';
 import "./ChatMessage.css";
