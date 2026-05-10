@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import StartPage from "./components/StartPage";
 import Header from "./components/Header";
 import ChatMessages from "./components/ChatMessages";
@@ -9,6 +9,13 @@ function App() {
   const [started, setStarted] = useState(false);
   const [chatMessages, setChatMessages] = useState([]);
   const [theme, setTheme] = useState("theme1");
+
+  useEffect(() => {
+    fetch("https://ai-chatbot-backend-bpf8.onrender.com/")
+      .catch(() => {
+        // Silently ignore wake-up failures; first chat will still retry.
+      });
+  }, []);
 
   return (
     <div className={`app-container ${theme}`}>
