@@ -21,13 +21,13 @@ export default function ChatInput({ chatMessages, setChatMessages }) {
     ]);
 
     try {
-      const res = await fetch("http://localhost:3001/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message: inputText })
-      });
+  const res = await fetch("https://ai-chatbot-backend-bpf8.onrender.com/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: inputText })
+  });
 
       const data = await res.json();
 
